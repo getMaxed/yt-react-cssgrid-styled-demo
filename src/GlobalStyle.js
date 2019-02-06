@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     *,
     *::before,
     *::after {
@@ -15,10 +15,16 @@ html {
     }    
 
 body {
-    background: linear-gradient(to left bottom, #40eeee, #26f4d3, #52f7aa, #87f778, #bdf23d) no-repeat;
-    height: 100vh;
-    font-family: 'Palatino Linotype'
+    background: linear-gradient(to right top, #1bdaed, #5dccff, #a1b9fb, #cfa6de, #e19ab6) no-repeat fixed;
+    font-family: 'Palatino Linotype';
+    /* color: #1b1a17; */
+    color: #3e3842
 }    
 `;
 
-export default GlobalStyle;
+export const theme = {
+    red: '#FF0000',
+    black: '#000000',
+    white: '#FFFFFF',
+    blue: '#d7e4f5'
+};

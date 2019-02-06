@@ -1,33 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from './GlobalStyle';
-import Card from './components/Card';
+import { GlobalStyle, theme } from './GlobalStyle';
+import Nav from './components/Nav';
+import Sidebar from './components/Sidebar';
+import AlbumsWrapper from './components/AlbumsWrapper';
+import Footer from './components/Footer';
 
 const StyledApp = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 1.5rem;
-    width: 90%;
-    margin: 3rem auto;
+    grid-template-columns: repeat(12, 1fr);
 `;
 
 const App = () => (
-    <StyledApp>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <GlobalStyle />
-    </StyledApp>
+    <ThemeProvider theme={theme}>
+        <StyledApp>
+            <Nav />
+            <Sidebar />
+            <AlbumsWrapper />
+            <Footer />
+            <GlobalStyle />
+        </StyledApp>
+    </ThemeProvider>
 );
 
 export default App;
